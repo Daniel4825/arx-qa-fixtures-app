@@ -1,0 +1,30 @@
+zh-TW:
+  subtitle: n8n 作為地端運行的流程自動化工具，可在裝置內串接應用並觸發 AI 或資料處理任務。
+  description: n8n 是一款開源、視覺化的工作流程自動化工具，能透過拖拉節點串聯不同的應用程式（如 Gmail、Notion、Google Sheets）與服務，自動執行重複性任務，讓沒有程式背景的人也能輕鬆建立自動化流程，實現數據整合、業務流程自動化，並能自我託管以完全掌控資料安全。
+zh-CN:
+  subtitle: n8n 作为本地运行的流程自动化工具，可在设备内对接应用并触发 AI 或数据处理任务。
+  description: n8n 是一款开源、可视化的工作流自动化工具，能通过拖拽节点串联不同的应用（如 Gmail、Notion、Google Sheets）与服务，自动执行重复性任务，让没有编程背景的人也能轻松构建自动化流程，实现数据集成、业务流程自动化，并能自托管以完全掌控数据安全。
+ja-JP:
+  subtitle: アプリを連携し、デバイス上で AI やデータ処理タスクを起動するオンプレミスのワークフロー自動化ツール。
+  description: n8n はオープンソースのビジュアルなワークフロー自動化ツールで、ノードをドラッグして接続することで、さまざまなアプリケーション（Gmail、Notion、Google Sheets など）やサービスを連携し、繰り返し作業を自動化します。プログラミングの知識がない人でも自動化フローを簡単に構築でき、データ統合や業務プロセスの自動化を実現します。セルフホストによりデータのセキュリティを完全に管理できます。
+ko-KR:
+  subtitle: 앱을 연결하고 기기 내에서 AI 또는 데이터 처리 작업을 트리거하는 온프레미스 워크플로 자동화 도구.
+  description: n8n은 오픈소스 비주얼 워크플로 자동화 도구로, 노드를 드래그하여 연결함으로써 다양한 애플리케이션(Gmail, Notion, Google Sheets 등)과 서비스를 연동하고 반복 작업을 자동화합니다. 프로그래밍 지식이 없는 사람도 자동화 흐름을 손쉽게 구축하여 데이터 통합과 업무 프로세스 자동화를 실현할 수 있으며, 셀프 호스팅으로 데이터 보안을 완전히 제어할 수 있습니다.
+de-DE:
+  subtitle: On-Premises-Workflow-Automatisierung, die Apps verknüpft und KI- oder Datenaufgaben auf dem Gerät auslöst.
+  description: n8n ist ein quelloffenes, visuelles Workflow-Automatisierungstool, das Anwendungen (wie Gmail, Notion und Google Sheets) und Dienste durch das Ziehen und Verknüpfen von Nodes verbindet, um wiederkehrende Aufgaben zu automatisieren. Auch Nicht-Entwickler können Automatisierungsabläufe für die Datenintegration und die Automatisierung von Geschäftsprozessen erstellen, und es lässt sich selbst hosten, um die volle Kontrolle über die Datensicherheit zu behalten.
+fr-FR:
+  subtitle: Automatisation de workflows on-premises qui relie les applications et déclenche des tâches d'IA ou de données sur l'appareil.
+  description: n8n est un outil open source d'automatisation visuelle de workflows qui connecte des applications (telles que Gmail, Notion et Google Sheets) et des services en faisant glisser et en reliant des nœuds pour automatiser les tâches répétitives. Les non-développeurs peuvent créer des flux d'automatisation pour l'intégration de données et l'automatisation des processus métier, et l'outil peut être auto-hébergé pour un contrôle total de la sécurité des données.
+it-IT:
+  subtitle: Automazione di workflow on-premises che collega le app e avvia attività di IA o di dati sul dispositivo.
+  description: n8n è uno strumento open source di automazione visuale dei workflow che collega applicazioni (come Gmail, Notion e Google Sheets) e servizi trascinando e collegando i nodi per automatizzare le attività ripetitive. Anche i non sviluppatori possono creare flussi di automazione per l'integrazione dei dati e l'automazione dei processi aziendali, e lo strumento può essere self-hosted per un controllo completo sulla sicurezza dei dati.
+nl-NL:
+  subtitle: On-premises workflowautomatisering die apps koppelt en AI- of datataken op het apparaat activeert.
+  description: n8n is een open-source, visuele tool voor workflowautomatisering die applicaties (zoals Gmail, Notion en Google Sheets) en diensten verbindt door nodes te slepen en te koppelen om repetitieve taken te automatiseren. Ook niet-ontwikkelaars kunnen automatiseringsstromen bouwen voor data-integratie en de automatisering van bedrijfsprocessen, en de tool kan zelf worden gehost voor volledige controle over de gegevensbeveiliging.
+pt-PT:
+  subtitle: Automação de workflows on-premises que liga aplicações e aciona tarefas de IA ou de dados no dispositivo.
+  description: O n8n é uma ferramenta open-source de automação visual de workflows que liga aplicações (como o Gmail, o Notion e o Google Sheets) e serviços arrastando e ligando nós para automatizar tarefas repetitivas. Mesmo os utilizadores sem conhecimentos de programação podem criar fluxos de automação para a integração de dados e a automação de processos de negócio, e pode ser alojada em servidor próprio para um controlo total sobre a segurança dos dados.
+es-ES:
+  subtitle: Automatización de workflows on-premises que enlaza aplicaciones y activa tareas de IA o de datos en el dispositivo.
+  description: n8n es una herramienta open source de automatización visual de workflows que conecta aplicaciones (como Gmail, Notion y Google Sheets) y servicios arrastrando y enlazando nodos para automatizar tareas repetitivas. Los usuarios sin conocimientos de programación pueden crear flujos de automatización para la integración de datos y la automatización de procesos de negocio, y puede autoalojarse para un control total sobre la seguridad de los datos.

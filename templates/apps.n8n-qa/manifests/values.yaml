@@ -1,0 +1,107 @@
+# Default values for n8n (8gears Helm Chart v2.0.1)
+# https://github.com/8gears/n8n-helm-chart
+
+image:
+  repository: n8nio/n8n
+  pullPolicy: IfNotPresent
+  tag: "1.122.4"
+
+ingress:
+  enabled: false
+  className: ""
+  annotations: {}
+  hosts:
+    - host: n8n.local
+      paths:
+        - path: /
+          pathType: Prefix
+  tls: []
+
+main:
+  # Default: SQLite (no external DB required)
+  # To use PostgreSQL, uncomment and configure:
+  # config:
+  #   db:
+  #     type: postgresdb
+  #     postgresdb:
+  #       host: "your-postgres-host"
+  #       port: 5432
+  #       database: n8n
+  #       user: "your-user"
+  # secret:
+  #   db:
+  #     postgresdb:
+  #       password: "your-password"
+
+  config:
+    n8n:
+      secure_cookie: false
+      # Allow the arx platform desktop to embed n8n in an iframe.
+      # n8n (helmet) otherwise sends `X-Frame-Options: SAMEORIGIN`, which blocks
+      # cross-origin framing. Serving a CSP with `frame-ancestors` makes browsers
+      # ignore X-Frame-Options (frame-ancestors takes precedence). helmet requires
+      # a `default-src` when CSP is enabled, so we set a permissive one that keeps
+      # n8n's effective policy as loose as it was with no CSP at all.
+      # NOTE: `frame-ancestors: *` lets any site frame n8n; tighten it to the
+      # platform origin(s) once the deployment host is fixed.
+      content_security_policy: '{"default-src":["*","''unsafe-inline''","''unsafe-eval''","data:","blob:"],"frame-ancestors":["*"]}'
+  secret: {}
+
+  persistence:
+    enabled: true
+    type: dynamic
+    storageClass: ""
+    accessModes:
+      - ReadWriteOnce
+    size: 10Gi
+
+  extraEnv: {}
+
+  replicaCount: 1
+
+  deploymentStrategy:
+    type: "Recreate"
+
+  serviceAccount:
+    create: true
+    automount: true
+    annotations: {}
+    name: ""
+
+  podAnnotations: {}
+  podLabels: {}
+
+  service:
+    type: ClusterIP
+    port: 80
+    annotations: {}
+
+  resources:
+    limits:
+      cpu: 1000m
+      memory: 1Gi
+    requests:
+      cpu: 500m
+      memory: 512Mi
+
+  livenessProbe:
+    httpGet:
+      path: /healthz
+      port: http
+    initialDelaySeconds: 60
+    periodSeconds: 10
+    timeoutSeconds: 5
+    failureThreshold: 3
+
+  readinessProbe:
+    httpGet:
+      path: /healthz
+      port: http
+    initialDelaySeconds: 30
+    periodSeconds: 5
+    timeoutSeconds: 3
+    failureThreshold: 3
+
+  nodeSelector: {}
+  tolerations: []
+  affinity: {}

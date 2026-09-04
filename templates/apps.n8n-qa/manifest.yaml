@@ -1,0 +1,51 @@
+version: "1.0"
+
+metadata:
+  id: apps.n8n-qa
+  name: n8n (QA)
+  version: 1.122.4
+  releaseDate: 2026-03-12
+  type: apps
+  categories:
+    - Automation
+  subtitle: On-premises workflow automation that links apps and triggers AI or data tasks on-device.
+  description: n8n is an open-source, visual workflow automation tool that connects applications (such as Gmail, Notion and Google Sheets) and services by dragging and linking nodes to automate repetitive tasks. Non-developers can build automation flows for data integration and business-process automation, and it can be self-hosted for full control over data security.
+  icon: ./n8n.svg
+  developer:
+    name: n8n
+    url: https://n8n.io/
+  links:
+    useCases: https://n8n.io/workflows/
+    privacyPolicy: https://n8n.io/legal/privacy/
+    termsOfUse: https://n8n.io/legal/eula/
+  supportedLanguages:
+    - en-US
+    - zh-TW
+  tags:
+    - workflow
+    - automation
+    - integration
+    - ai
+    - low-code
+    - productivity
+
+resources:
+  cpu: "0.5"
+  memory: "512Mi"
+  storage: "10Gi"
+  gpu: 0
+  vram: null
+
+deployment:
+  type: helm
+  helmRepository:
+    type: oci
+    name: n8n-helm-chart
+    url: oci://8gears.container-registry.com/library
+  helmChart:
+    chart: n8n
+    version: "2.0.1"
+    valuesFiles:
+      - manifests/values.yaml
+
+dependencies: []

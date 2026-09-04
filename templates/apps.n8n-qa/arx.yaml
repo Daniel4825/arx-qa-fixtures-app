@@ -1,0 +1,18 @@
+apiVersion: arx.ardge.com/v1
+kind: ArxBinding
+spec:
+  network:
+    services:
+      http:
+        type: NodePort
+        ports:
+          - port: 5678
+  desktop:
+    shortcuts:
+      - label: n8n
+        open:
+          - iframe
+          - newtab
+        serviceRef: http
+        scheme: http
+        path: /
